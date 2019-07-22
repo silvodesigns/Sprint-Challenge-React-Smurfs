@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import './App.css';
 import SmurfForm from './components/SmurfForm';
@@ -19,7 +20,7 @@ class App extends Component {
   //lets make the call and get data from server
   componentDidMount(){
     axios.get('/smurfs')
-   .then(response => this.setState({smurfs: response.data}))
+   .then(response => console.log(response))
    .catch(err => console.log(err));
 }
 
